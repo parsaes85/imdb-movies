@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="tailwindcss/output.css">
+    <title>Document</title>
+</head>
+<body class="bg-mainBg">
+    <!-- loader -->
+    <div class="loader fixed h-full w-full bg-mainBg text-mainTextColor z-50 flex justify-center items-center">
+        <i class='bx bx-loader-alt bx-spin bx-lg' ></i>
+    </div>
+
+    <!-- gob back btn -->
+    <i class='bx bx-left-arrow-alt bx-md text-zinc-300 fixed top-2 left-2 cursor-pointer'></i>
+
+    <!-- search -->
+    <nav class="py-3">
+        <div class="container mx-auto">
+            <div class="w-3/4 mx-auto  md:w-2/4 relative">
+                <input class="search-input w-full h-10 block mx-auto rounded-md px-2 text-mainTextColor bg-[#585759a1] placeholder:text-mainTextColor placeholder:text-center outline-none focus:outline-[#585759]" type="text" placeholder="Search">
+                <i class='bx bx-search bx-sm text-mainTextColor absolute right-4 top-2.5 cursor-pointer' ></i>
+
+                <div class="search-movies-container absolute top-11 z-50 w-full overflow-y-auto rounded-lg text-mainTextColor">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="px-5">
+        <!-- genre title -->
+        <h1 class="genre-title text-mainTextColor text-2xl md:text-4xl my-4 md:my-7"></h1>
+
+        <!-- genre movies -->
+        <div class="genre-movie-container container mx-auto">
+        </div>
+
+        <!-- loader -->
+        <div class="next-movies-page-loader flex justify-center py-2">
+            <i class='bx bx-loader-alt bx-spin bx-lg text-mainTextColor' ></i>
+        </div>
+    </main>
+
+    <script src="mainJs/movies.js"></script>
+    <!-- import modules -->
+    <script src="jsModules/loader.js"></script>
+    <script src="jsModules/refreshMessage.js"></script>
+    <script src="jsModules/goToMovieInfo.js"></script>
+    <script src="jsModules/search.js"></script>
+    <script src="jsModules/goBack.js"></script>
+</body>
+</html>

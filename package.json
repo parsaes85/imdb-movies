@@ -1,0 +1,15 @@
+{
+  "name": "movie-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build": "tailwind -i ./tailwindcss/input.css -o ./tailwindcss/output.css",
+    "watch": "tailwind -i ./tailwindcss/input.css -o ./tailwindcss/output.css --watch"
+  },
+  "author": "parsa",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.2.7"
+  }
+}

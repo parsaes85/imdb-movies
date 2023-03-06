@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="tailwindcss/output.css">
+    <title>Movie Info</title>
+</head>
+<body class="bg-mainBg">
+    <!-- loader -->
+    <div class="loader fixed top-0 h-full w-full bg-mainBg text-mainTextColor z-50 flex justify-center items-center">
+        <i class='bx bx-loader-alt bx-spin bx-lg' ></i>
+    </div>
+
+    <!-- go back btn -->
+    <i class='bx bx-left-arrow-alt bx-md text-zinc-300 fixed top-2 left-2 cursor-pointer'></i>
+
+    <!-- header poster -->
+    <header id="movie-info-header" class="h-52 w-full md:h-80 absolute top-0 -z-40">
+        <img class="h-full w-full brightness-[0.3]" src="" alt="">
+    </header>
+
+    <!-- header main details -->
+    <section class="mx-3 mt-20 md:mt-36">
+        <div class="container mx-auto flex">
+            <img class="movie-img w-32 md:w-44 rounded-md" src="" alt="">
+
+            <div class="ml-3 text-mainTextColor space-y-2 mt-3">
+                <h1 class="movie-title text-2xl md:text-4xl"></h1>
+                <p class="movie-country text-xs md:text-base"></p>
+
+                <div class="movie-genres">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- movie details -->
+    <section class="mx-3 my-16">
+        <div class="details container mx-auto text-mainTextColor text-lg space-y-5">
+        </div>
+    </section>
+
+    <!-- movie images -->
+    <section class="mx-3 mb-8">
+        <div class="movie-images container mx-auto flex flex-wrap justify-center gap-3">
+        </div>
+    </section>
+
+    <script src="mainJs/movieInfo.js"></script>
+    <!-- import modules -->
+    <script src="jsModules/loader.js"></script>
+    <script src="jsModules/goBack.js"></script>
+    <script src="jsModules/refreshMessage.js"></script>
+</body>
+</html>

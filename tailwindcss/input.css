@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .movie-container {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        border-radius: 8px;
+        gap: 16px;
+        padding-bottom: 15px;
+        margin: 24px 0px;
+    }
+    .movie {
+        flex: 0 0 210px;
+        width: 210px;
+        scroll-snap-align: start;
+    }
+    .movie h1 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .genre-movie-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(208px, auto));
+        gap: 1rem;
+    }
+
+    @media (max-width:768px) {
+        .movie {
+            flex: 0 0 130px;
+            width: 130px;
+        }
+
+        .genre-movie-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(80px, auto));
+            gap: 1rem;
+        }
+    }
+}
+
+.loader.hide {
+    animation: fadeOut .5s;
+    animation-fill-mode: forwards;
+}
+.loader.hide > i {
+    display: none;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }   
+}
+
+@media (min-width: 768px) {
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 5px;
+    }
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #c7c7c7; 
+        border-radius: 8px;
+    }
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #616161; 
+        border-radius: 8px;
+    }
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #363636; 
+    }
+}

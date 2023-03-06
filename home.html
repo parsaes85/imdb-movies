@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="tailwindcss/output.css">
+    <title>250 IMDB</title>
+</head>
+<body class="bg-mainBg">
+    <!-- loader -->
+    <div class="loader fixed h-full w-full bg-mainBg text-mainTextColor z-50 flex justify-center items-center">
+        <i class='bx bx-loader-alt bx-spin bx-lg' ></i>
+    </div>
+
+    <!-- search -->
+    <nav class="py-3">
+        <div class="container mx-auto">
+            <div class="w-3/4 mx-auto  md:w-2/4 relative">
+                <input class="search-input w-full h-10 block mx-auto rounded-md px-2 text-mainTextColor bg-[#585759a1] placeholder:text-mainTextColor placeholder:text-center outline-none focus:outline-[#585759]" type="text" placeholder="Search">
+                <i class='bx bx-search bx-sm text-mainTextColor absolute right-4 top-2.5 cursor-pointer' ></i>
+
+                <div class="search-movies-container absolute top-11 z-50 w-full overflow-y-auto rounded-lg text-mainTextColor">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="px-5">
+        <!-- genres movies -->
+        <div class="container mx-auto">
+            <section class="my-14">
+                <div class="flex items-center justify-between">
+                    <h1 class="text-mainTextColor text-2xl md:text-4xl">Action</h1>
+
+                    <a href="movies.html?genreId=3" class="text-mainTextColor bg-movieBg text-xs md:text-base rounded-md py-2 px-3 hover:bg-zinc-800">
+                        See All
+                        <i class='bx bx-right-arrow-alt'></i>
+                    </a>
+                </div>
+
+                <div class="movie-container" data-genresid="3">
+                </div>
+            </section>
+
+            <section class="my-14">
+                <div class="flex items-center justify-between">
+                    <h1 class="text-mainTextColor text-2xl md:text-4xl">Drama</h1>
+
+                    <a href="movies.html?genreId=2" class="text-mainTextColor bg-movieBg text-xs md:text-base rounded-md py-2 px-3 hover:bg-zinc-800">
+                        See All
+                        <i class='bx bx-right-arrow-alt'></i>
+                    </a>
+                </div>
+
+                <div class="movie-container" data-genresid="2">
+                </div>
+            </section>
+
+            <section class="my-14">
+                <div class="flex items-center justify-between">
+                    <h1 class="text-mainTextColor text-2xl md:text-4xl">History</h1>
+
+                    <a href="movies.html?genreId=5" class="text-mainTextColor bg-movieBg text-xs md:text-base rounded-md py-2 px-3 hover:bg-zinc-800">
+                        See All
+                        <i class='bx bx-right-arrow-alt'></i>
+                    </a>
+                </div>
+
+                <div class="movie-container" data-genresid="5">
+                </div>
+            </section>
+
+            <section class="my-14">
+                <div class="flex items-center justify-between">
+                    <h1 class="text-mainTextColor text-2xl md:text-4xl">Comedy</h1>
+
+                    <a href="movies.html?genreId=9" class="text-mainTextColor bg-movieBg text-xs md:text-base rounded-md py-2 px-3 hover:bg-zinc-800">
+                        See All
+                        <i class='bx bx-right-arrow-alt'></i>
+                    </a>
+                </div>
+
+                <div class="movie-container" data-genresid="9">
+                </div>
+            </section>
+
+            <section class="my-14">
+                <div class="flex items-center justify-between">
+                    <h1 class="text-mainTextColor text-2xl md:text-4xl">Family</h1>
+
+                    <a href="movies.html?genreId=13" class="text-mainTextColor bg-movieBg text-xs md:text-base rounded-md py-2 px-3 hover:bg-zinc-800">
+                        See All
+                        <i class='bx bx-right-arrow-alt'></i>
+                    </a>
+                </div>
+
+                <div class="movie-container" data-genresid="13">
+                </div>
+            </section>
+
+            <section class="my-14">
+                <div class="flex items-center justify-between">
+                    <h1 class="text-mainTextColor text-2xl md:text-4xl">War</h1>
+
+                    <a href="movies.html?genreId=14" class="text-mainTextColor bg-movieBg text-xs md:text-base rounded-md py-2 px-3 hover:bg-zinc-800">
+                        See All
+                        <i class='bx bx-right-arrow-alt'></i>
+                    </a>
+                </div>
+
+                <div class="movie-container" data-genresid="14">
+                </div>
+            </section>
+
+            <section class="my-14">
+                <div class="flex items-center justify-between">
+                    <h1 class="text-mainTextColor text-2xl md:text-4xl">Animation</h1>
+
+                    <a href="movies.html?genreId=15" class="text-mainTextColor bg-movieBg text-xs md:text-base rounded-md py-2 px-3 hover:bg-zinc-800">
+                        See All
+                        <i class='bx bx-right-arrow-alt'></i>
+                    </a>
+                </div>
+
+                <div class="movie-container" data-genresid="15">
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="mainJs/home.js"></script>
+    <!-- import modules -->
+    <script src="jsModules/search.js"></script>
+    <script src="jsModules/goToMovieInfo.js"></script>
+    <script src="jsModules/loader.js"></script>
+    <script src="jsModules/refreshMessage.js"></script>
+</body>
+</html>
