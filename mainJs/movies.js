@@ -16,8 +16,6 @@ const getGenre = async () => {
         return genre.id == movieIdParam
     })
     genreTitle.innerText = mainGenre.name
-
-    fetchData()
 };
 getGenre()
 
@@ -38,6 +36,7 @@ const fetchData = async () => {
         refreshMessage()
     }
 };
+fetchData()
 
 // show selected genre movies
 const showData = (movies) => {
