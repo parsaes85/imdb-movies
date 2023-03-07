@@ -8,7 +8,7 @@ const body = document.body
 let page = 1
 
 // get and show title of selected genre
-const getGenre = ( async () => {
+const getGenre = async () => {
     let res = await fetch('http://moviesapi.ir/api/v1/genres')
     let data = await res.json()
 
@@ -18,7 +18,8 @@ const getGenre = ( async () => {
     genreTitle.innerText = mainGenre.name
 
     fetchData()
-})();
+};
+getGenre()
 
 // get selected genre movies
 const fetchData = async () => {
@@ -82,4 +83,3 @@ if(innerWidth > 490) {
     })
 
 }
-
