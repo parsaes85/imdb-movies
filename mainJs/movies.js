@@ -9,7 +9,7 @@ let page = 1
 
 // get and show title of selected genre
 const getGenre = async () => {
-    let res = await fetch('http://moviesapi.ir/api/v1/genres')
+    let res = await fetch('https://moviesapi.ir/api/v1/genres')
     let data = await res.json()
 
     const mainGenre = data.find(genre => {

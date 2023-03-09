@@ -8,7 +8,7 @@ const searchMovie = async (value) => {
         searchMoviesContainer.innerHTML = ''
     }else {
         searchMoviesContainer.innerHTML = 'Searching ...'
-        let res = await fetch(`http://moviesapi.ir/api/v1/movies?q=${value}`)
+        let res = await fetch(`https://moviesapi.ir/api/v1/movies?q=${value}`)
         let data = await res.json()
             
         showMovie(data.data)
