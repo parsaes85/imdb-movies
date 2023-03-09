@@ -5,7 +5,7 @@ const searchInput = document.querySelector('.search-input')
 // get searched movie
 const searchMovie = async (value) => {
     if(!value) {
-        searchMoviesContainer.innerHTML = ''
+        hideSearchMoviesContainer()
     }else {
         searchMoviesContainer.innerHTML = 'Searching ...'
         let res = await fetch(`https://moviesapi.ir/api/v1/movies?q=${value}`)
@@ -17,8 +17,9 @@ const searchMovie = async (value) => {
 
 // show searched movie
 const showMovie = (movies) => {
-    searchMoviesContainer.classList.add('h-80')
+    searchMoviesContainer.classList.add('max-h-80')
     searchMoviesContainer.innerHTML = ''
+    searchMoviesContainer.classList.remove('hidden')
     movies.forEach(movie => {
         searchMoviesContainer.insertAdjacentHTML('beforeend', `
         <div class="flex w-full rounded-lg bg-[#0e0e0f] border-b border-b-movieBg cursor-pointer hover:bg-[#222225]" onclick="goToMovieInfo(${movie.id})">
@@ -37,6 +38,11 @@ const showMovie = (movies) => {
     }
 }
 
+const hideSearchMoviesContainer = () => {
+    searchMoviesContainer.innerHTML = ''
+    searchMoviesContainer.classList.add('hidden')
+}
+
 searchBtn.addEventListener('click', e => {
     searchMovie(searchInput.value)
 })
@@ -49,9 +55,9 @@ searchInput.addEventListener('keydown', e => {
 // actions for closing search list
 window.addEventListener('click', e => {
     if(['BODY', 'NAV'].includes(e.target.nodeName)) {
-        searchMoviesContainer.innerHTML = ''
+        hideSearchMoviesContainer()
     }
 })
 window.addEventListener('scroll', e => {
-    searchMoviesContainer.innerHTML = ''
+    hideSearchMoviesContainer()
 })
