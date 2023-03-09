@@ -73,6 +73,7 @@ if(innerWidth > 490) {
     })
 }else {
     window.addEventListener('scroll', e => {
+        console.log(body.offsetHeight, window.scrollY)
         if(body.offsetHeight - 538 == window.scrollY) {
             page++
             console.log(page)
