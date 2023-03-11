@@ -62,24 +62,11 @@ const showData = (movies) => {
 }
 
 // when we go end of the site next movies show
-if(innerWidth > 490) {
-    window.addEventListener('scroll', e => {
-        if(body.offsetHeight - 625 == window.scrollY) {
-            page++
-            console.log(page)
-    
-            fetchData()
-        }
-    })
-}else {
-    window.addEventListener('scroll', e => {
-        console.log(body.offsetHeight, window.scrollY)
-        if(body.offsetHeight - 538 == window.scrollY) {
-            page++
-            console.log(page)
+window.addEventListener('scroll', e => {
+    if(window.innerHeight + window.pageYOffset >= body.scrollHeight) {
+        page++
+        console.log(page)
 
-            fetchData()
-        }
-    })
-
-}
+        fetchData()
+    }
+})
