@@ -2,6 +2,11 @@
 
 const movieContainer = document.querySelectorAll('.movie-container')
 
+
+fetch('http://moviesapi.ir/api/v1/genres')
+    .then(res => res.json())
+    .then(data => console.log(data))
+
 // fetch movie data
 const fetchData = async (id) => {
     try {
