@@ -8,7 +8,7 @@ const body = document.body
 let page = 1
 
 // get and show title of selected genre
-const getGenre = async () => {
+const getGenreName = ( async () => {
     let res = await fetch('https://moviesapi.ir/api/v1/genres')
     let data = await res.json()
 
@@ -16,8 +16,14 @@ const getGenre = async () => {
         return genre.id == movieIdParam
     })
     genreTitle.innerText = mainGenre.name
-};
-getGenre()
+
+    setWebTitle(mainGenre.name)
+})();
+
+// set web title
+const setWebTitle = (titleName) => {
+    document.title = titleName + ' Movies'
+}
 
 // get selected genre movies
 const fetchData = async () => {
