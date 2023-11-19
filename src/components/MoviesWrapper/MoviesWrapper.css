@@ -1,0 +1,21 @@
+.movie-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  border-radius: 8px;
+  gap: 16px;
+  padding-bottom: 15px;
+  margin: 24px 0px;
+}
+.movie {
+  flex: 0 0 210px;
+  width: 210px;
+  scroll-snap-align: start;
+}
+
+@media (max-width: 768px) {
+  .movie {
+    flex: 0 0 130px;
+    width: 130px;
+  }
+}

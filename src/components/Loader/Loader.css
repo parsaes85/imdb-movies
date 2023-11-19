@@ -1,0 +1,14 @@
+.loader.hide {
+    animation: fadeOut .5s;
+    animation-fill-mode: forwards;
+}
+.loader.hide > i {
+    display: none;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }   
+}
