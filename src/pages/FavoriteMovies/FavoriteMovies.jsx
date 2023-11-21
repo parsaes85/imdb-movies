@@ -46,10 +46,10 @@ export default function FavoriteMovies() {
             {favoriteMovies.map((movie) => (
               <MovieBox key={movie.id} {...movie} isInIndexPage={false}>
                 <span
-                  class="absolute top-0 right-0 bg-red-700 text-gray-300 p-[5px] text-xs md:text-sm rounded-tr-lg z-50 hover:bg-red-800"
+                  className="absolute top-0 right-0 bg-red-700 text-gray-300 p-[5px] text-xs md:text-sm rounded-tr-lg z-50 hover:bg-red-800"
                   onClick={() => removeFromFavorites(movie.id)}
                 >
-                  <i class="bx bxs-trash-alt"></i>
+                  <i className="bx bxs-trash-alt"></i>
                 </span>
               </MovieBox>
             ))}

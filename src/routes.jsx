@@ -1,7 +1,7 @@
 import Index from "./pages/Index/Index"
 import MovieInfo from "./pages/MovieInfo/MovieInfo"
 import Movies from "./pages/Movies/Movies"
-import FavoriteMovies from "./pages/favoriteMovies/favoriteMovies"
+import FavoriteMovies from "./pages/FavoriteMovies/FavoriteMovies"
 
 const routes = [
     { path: "/", element: <Index /> },
