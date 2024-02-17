@@ -17,7 +17,7 @@ export default function Sidebar({ isSidebarShow, setIsSidebarShow }) {
   }, []);
 
   return (
-    <div id="navbar-parent" className={`fixed w-full h-[100vh] transition-all ${isSidebarShow ? "z-50 right-0 opacity-100" : "-right-32 opacity-0 -z-50"}`}>
+    <div id="navbar-parent" className={`fixed w-full top-0 h-[100vh] transition-all ${isSidebarShow ? "z-50 right-0 opacity-100" : "-right-32 opacity-0 -z-50"}`}>
       <div
         id="navbar"
         className={`bg-[#2122248a] h-full ml-auto w-56 py-20 backdrop-blur-3xl`}
